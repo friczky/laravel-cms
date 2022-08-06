@@ -16,7 +16,7 @@ class ProfileController extends Controller
 
     public function index()
     {
-        return view('profile');
+        return view('pages.profile.profile');
     }
 
     public function update(Request $request)
