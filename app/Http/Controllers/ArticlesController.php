@@ -15,4 +15,9 @@ class ArticlesController extends Controller
 
         return view('pages.articles.index', compact('articles'));
     }
+
+    public function add()
+    {
+        return view('pages.articles.add');
+    }
 }

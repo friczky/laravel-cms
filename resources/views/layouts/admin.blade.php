@@ -58,11 +58,19 @@
                 {{ __('Articles') }}
             </div>
 
-            <!-- Nav Item - Profile -->
+            <!-- Nav Item - All Articles -->
             <li class="nav-item {{ Nav::isRoute('articles') }}">
                 <a class="nav-link" href="{{ route('articles') }}">
                     <i class="fas fa-fw fa-user"></i>
                     <span>{{ __('All Articles') }}</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Add Articles -->
+            <li class="nav-item {{ Nav::isRoute('articles.add') }}">
+                <a class="nav-link" href="{{ route('articles.add') }}">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>{{ __('Add Articles') }}</span>
                 </a>
             </li>
 

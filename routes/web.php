@@ -31,4 +31,5 @@ Route::get('/about', function () {
 
 Route::prefix('/articles')->group(function () {
     Route::get('/', 'ArticlesController@index')->name('articles');
+    Route::get('/add', 'ArticlesController@add')->name('articles.add');
 });
