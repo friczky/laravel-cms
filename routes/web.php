@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -33,3 +34,5 @@ Route::prefix('/articles')->group(function () {
     Route::get('/', 'ArticlesController@index')->name('articles');
     Route::get('/add', 'ArticlesController@add')->name('articles.add');
 });
+
+Route::resource('/category', CategoryController::class);

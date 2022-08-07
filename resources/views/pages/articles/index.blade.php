@@ -30,24 +30,28 @@
                 {{ __('All Articles') }}
             </div>
             <div class="card-body">
-                <table class="table">
-                    <tr>
-                        <th>No.</th>
-                        <th>Title</th>
-                        <th>Category</th>
-                        <th>Body</th>
-                        <th>Thumbnail</th>
-                        <th>Action</th>
-                    </tr>
+                <table id="datatables" class="table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Body</th>
+                            <th>Thumbnail</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
 
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
