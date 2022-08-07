@@ -15,7 +15,9 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        return view('pages.articles.category');
+        $data = Categories::orderBy('id', 'desc')->get();
+        $no = 1;
+        return view('pages.articles.category', compact('data', 'no'));
     }
 
     /**
@@ -38,6 +40,10 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
+        $category = new Categories();
+        $category->name = $request->name;
+        $category->save();
+        return redirect()->route('category.index')->withSuccess('Category added successfully.');
     }
 
     /**
@@ -83,5 +89,8 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         //
+        $category = Categories::findOrFail($id);
+        $category->delete();
+        return redirect()->route('category')->withSuccess('Category deleted successfully.');
     }
 }

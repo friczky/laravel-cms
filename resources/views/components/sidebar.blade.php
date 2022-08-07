@@ -42,6 +42,14 @@
         </a>
     </li>
 
+    <!-- Nav Item - Category -->
+    <li class="nav-item {{ Nav::isRoute('category.index') }}">
+        <a class="nav-link" href="{{ route('category.index') }}">
+            <i class="fas fa-fw fa-user"></i>
+            <span>{{ __('Category') }}</span>
+        </a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider">
 
